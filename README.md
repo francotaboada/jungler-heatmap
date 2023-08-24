@@ -1,5 +1,5 @@
-# jungler-stats
-Testing the Riot API with data found on Kaggle to predict jungler movements in the first 10 minutes of the game.
+# League of Legends Jungler Location Heatmaps
+Using data found on Kaggle to predict jungler movements in the first few minutes of the game in high elo games.
 
 ## Dataset
 
