@@ -3,7 +3,7 @@ Using data found on Kaggle to predict the jungler player's movements in the firs
 
 ## Dataset
 
-https://www.kaggle.com/datasets/lawsus/lol-interpolated-positions
+[combined_interpolated_data.csv](https://www.kaggle.com/datasets/lawsus/lol-interpolated-positions)
 
 ## Technology
 
@@ -13,9 +13,6 @@ pandas (pd), matplotlib, OpenCV (cv2), numpy (np).
 
 ### Jupyter Notebook
 
-## Dataset
-
-### combined_interpolated_data.csv
 
 ## Quick Explanation of the Game League of Legends
 
@@ -32,6 +29,8 @@ pandas (pd), matplotlib, OpenCV (cv2), numpy (np).
 * ADC
 
 * Support
+
+  [...]
 
 ## Limitations of Data
 
