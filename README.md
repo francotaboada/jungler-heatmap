@@ -43,12 +43,14 @@ This scatterplot was created using every 60th data point in the dataset to see t
 
 
 ### Blue Side Scatterplots
+Using Player2_X and Player2_Y, scatterplots can be created based on the blue-side junglers' position by the minute. These scatterplots go from minute 0 (the start of the game) to minute 7.
 
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/6cfdff0b-2296-4cf5-9157-811bbcffb708)
 
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/12b49e03-afb5-467b-80c9-137daeed93c9)
 
 ### Red Side Scatterplots
+Using Player7_X and Player7_Y, scatterplots can be created based on the red-side junglers' position by the minute. These scatterplots go from minute 0 (the start of the game) to minute 7.
 
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/6094c8d5-be8d-4a03-80cf-d0b6a47f551a)
 
@@ -60,19 +62,27 @@ Assuming that all jungler players above the middle lane at 2 minutes started at 
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/546e3aaf-3f7d-4792-825f-155bf7f3171d)
 
 #### Blue Side Starting Top Side
+Scatterplot that logs the positions of the blue-side junglers starting the top side buff around two minutes. At the three minute, you can see that most junglers go from the top side to the bottom side. This is different from those who start at the bottom side as you will see in the next section.
+
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/ddd6d2f1-5b41-44c1-9595-ad87a8418adc)
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/050e6c79-6dd5-4a96-916b-7362d000cf2c)
 
 
 #### Blue Side Starting Bot Side
+Scatterplot that logs the positions of the blue-side junglers starting the bottom side buff around two minutes. As opposed to the junglers who start top-side, junglers are more volatile in their positioning after they get their jungle camps on the bottom side of the map. This can be observed in the lack of density at minute 3 as compared to the scatterplots above.
+
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/92b5674f-8b62-414f-a64a-85afb779d1be)
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/de216003-2241-4eda-ae4b-9307b1177266)
 
 #### Red Side Starting Top Side
+Scatterplot that logs the positions of the red-side junglers starting the top side buff around two minutes. At the three minute, you can see that most junglers go from the top side to the bottom side. The same result as the blue-side top-side starting junglers.
+
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/91ac6917-823e-405f-a981-1ce4bcdb65e9)
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/7d517e5a-6cbb-4bf2-b636-57861670af92)
 
 #### Red Side Starting Bot Side
+Scatterplot that logs the positions of the blue-side junglers starting the top side buff around two minutes. Different from the blue-side bottom-side junglers, the red-side junglers who start on the bottom side will most likely go to their top-side camps instead of going on a more erratic path. The groupings are more dense making them more uniform.
+
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/a359ba2e-962e-4fbe-83cc-92a89aed4a94)
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/4e45ab37-6d32-4a7b-8d84-0634a1a0a343)
 
