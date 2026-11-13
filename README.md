@@ -1,5 +1,5 @@
 # League of Legends Jungler Pathing Location Heatmaps in High Elo Games
-Using data found on Kaggle to predict the jungler player's movements in the first few minutes of the game in high elo games using heatmaps.
+Descriptive analysis of early-game jungler positions (minutes 0-7) in 287 high-Elo League of Legends games, using position scatterplots and heatmaps over a map of Summoner’s Rift. This project describes where junglers go. 
 
 ## Dataset
 
