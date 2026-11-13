@@ -37,7 +37,7 @@ The CSV file is separated into MatchID, Time, PlayerN Positions (x,y), Distance 
 # Graphs
 In the section below are the graphs created using the dataset.
 ## Raw Scatterplots
-This scatterplot was created using every 60th data point in the dataset to see the accuracy of the background map chosen for the players Player 2 and Player 7 (blue side and red side junglers, respectively). As seen below, the map is not perfect but gives a good example of the map being more accurate than not.
+This scatterplot was created using every 60th data point in the dataset to see the accuracy of the background map chosen for the players Player 2 and Player 7 (blue side and red side junglers, respectively). As seen below, the map is not perfect but gives a good example of the map being more accurate than not. Game coordinates are divided by 10 and the Y axis is flipped (Y = 1500 - Y/10) to fit a 1500x1500 map image. This is a straight linear rescale with no calibration, so the overlay is approximate.
 
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/6be9f53b-9350-4f38-b2e8-081f540ae752)
 
@@ -57,7 +57,7 @@ Using Player7_X and Player7_Y, scatterplots can be created based on the red-side
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/a215ad54-a8df-49fa-a810-ac3c942f1758)
 
 ### Scatterplots Based on Starting Location
-Assuming that all jungler players above the middle lane at 2 minutes started at the top side and all jungler players below the middle lane at 2 minutes started at the bottom side. The graph below shows the starting positions of the jungler at the two-minute mark, assuming the players took normal jungling paths instead of moving around the map in an erratic way. Players who are red side and starting at the top are just red. Junglers that are on the red side but starting bottom side are magenta. Blue-side junglers starting top side are dark blue and blue-side junglers starting bottom side are just blue.
+Starting side is inferred from each jungler's position in the minute-2 frame: positions on the upper-left side of the diagonal through the middle lane are classed top-start, all others bottom-start. Every game is assigned to one group, so junglers not on a normal clear path at 2:00 may be misclassified. Group sizes: blue top [n], blue bot [n], red top [n], red bot [n]. Colors: dark blue = blue/top, blue = blue/bot, red = red/top, medium violet red = red/bot.
 
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/546e3aaf-3f7d-4792-825f-155bf7f3171d)
 
@@ -87,7 +87,7 @@ Scatterplot that logs the positions of the blue-side junglers starting the top s
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/4e45ab37-6d32-4a7b-8d84-0634a1a0a343)
 
 ## Jungler Heatmaps
-Using a numpy zeroes array based on the resized background image, the coordinates of the players can be accounted for and create a visual guide to where the junglers are at any given moment. The heatmap below shows the positions of junglers 1 and 2 throughout the entire game throughout all 287 games.
+The heatmap below shows the positions of Player2 and Player7 (the blue- and red-side junglers) in all 287 games, using 16-pixel bins and counting every 60-second frame after the first.
 
 ![allmatchesgraph](https://github.com/francotaboada/jungler-heatmap/assets/18605940/422b989c-13e0-4fd5-81c9-9604368500fc)
 
@@ -121,7 +121,7 @@ Heatmap based on the positions at minutes 0-7.
 
 ## Limitations of Data
 
-Since the data is generated using the Riot API, the API only tracks the location of players in a "frame" which is every 60 seconds. For our data, this means that every 60th entry in the interpolated values is the most accurate portrayal of the player's location. Due to the nature of League of Legends fast-paced gameplay, junglers can move very quickly around the map in 60 seconds. In between each frame, junglers in the game have many options for objectives and assisting other players in the game. This volatile gameplay makes tracking players later in the game very difficult as one team gaining an advantage shifts the players towards one side of the map (top right or bottom left).
+The Riot API records player positions once per 60 seconds. The dataset adds interpolated positions between frames, and this analysis uses every 60th row, assuming 60 rows per frame, as the real observations.
 
 ![image](https://github.com/francotaboada/jungler-heatmap/assets/18605940/744ef681-4630-4c1d-861e-978dda690fc3)
 
